@@ -1,9 +1,9 @@
 
 # WUPHF
 
-Navn stjålet fra The Office.
+Send a message to a person on all platforms, WUPHF!
 
-For å kunne sende meldinger for DRS i relevante kanaler for andre jobber som står og går.
+Made to easyily send notifications from cron-like to IT and non-IT employees.
 
 ## Quickstart
 
@@ -13,15 +13,18 @@ from wuphf import Wuphf, Msg
 wuphf = Wuphf()
 
 msg = Msg(title='title', msg='message'))
-wuphf.slack(msg, ())
-wup
+
+wuphf.slack(msg, ('#my-channel'))
+# or
+wuphf.send(msg, ('#my-channel'), 'slack')
+
 ```
 
 ## Services:
 
-- Basic SMTP mail
-- Det mail-APIet.
+- SMTP (mail)
+- Sendgrid (mail)
 - Purecloud
 - Slack
 - MS Teams
-- DRSSMS
+- DRSSMS (corp sms service)
